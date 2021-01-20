@@ -521,6 +521,9 @@
                            position: static;
                            margin-top: 10px;
                        }
+                       #overlapping .content span {
+                           font-size: 3.8vw;
+                       }
                    }
                    
                    @media (max-width:450px) {
@@ -535,6 +538,9 @@
                            transform: rotate(0deg);
                            color: white;
                            font-size: 20px;
+                       }
+                       #overlapping .content span {
+                           font-size: 5.8vw;
                        }
                    }
                    
