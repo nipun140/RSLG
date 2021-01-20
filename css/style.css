@@ -1,0 +1,542 @@
+                   html {
+                       overflow-x: hidden;
+                   }
+                   
+                   * {
+                       box-sizing: border-box;
+                   }
+                   
+                   body {
+                       margin: 0px;
+                   }
+                   /* navbar  */
+                   
+                   .mycontainer {
+                       /* concept of var */
+                       width: 100%;
+                       background-color: white;
+                       display: flex;
+                       justify-content: space-between;
+                       align-items: center;
+                       position: relative;
+                   }
+                   
+                   .butn {
+                       position: absolute;
+                       right: 10px;
+                       width: 40px;
+                       height: 40px;
+                       display: none;
+                       flex-direction: column;
+                       align-items: center;
+                       justify-content: space-evenly;
+                       cursor: pointer;
+                       top: 15px;
+                   }
+                   
+                   .butn .bar {
+                       width: 95%;
+                       height: 6px;
+                       background-color: black;
+                       /* border-radius: 20%; */
+                   }
+                   
+                   .navbar ul {
+                       list-style-type: none;
+                       padding: 0px;
+                       margin: 0px;
+                       display: flex;
+                   }
+                   
+                   .navbar ul li a:hover {
+                       color: red;
+                   }
+                   
+                   .navbar ul li a {
+                       text-decoration: none;
+                       padding: 10px 15px;
+                       font-size: 20px;
+                       display: block;
+                       color: black;
+                   }
+                   
+                   .brand_name {
+                       color: white;
+                       font-size: 25px;
+                       margin: 7px;
+                   }
+                   
+                   @media(max-width:768px) {
+                       .butn {
+                           display: flex;
+                       }
+                       .mycontainer {
+                           flex-direction: column;
+                           align-items: flex-start;
+                       }
+                       .navbar {
+                           width: 100%;
+                       }
+                       .active {
+                           /* width: 100%; */
+                           display: flex !important;
+                       }
+                       .navbar ul {
+                           display: none;
+                           flex-direction: column;
+                           /* justify-content: center;
+                            align-items: center; */
+                       }
+                       .navbar ul li {
+                           width: 100%;
+                       }
+                       .navbar ul li a {
+                           /* text-align: center; */
+                           padding: 5px 0px;
+                       }
+                   }
+                   /* dropdown in navbar css  */
+                   
+                   .dropcontainer {
+                       display: inline-block;
+                       position: relative;
+                   }
+                   
+                   .dropdown_content {
+                       display: none;
+                       opacity: 0;
+                       position: absolute;
+                       /*absolute because we want the dropdown content to come over the text below it and not disturb the flow of contents by leaving an empty space*/
+                       min-width: 220px;
+                       /* border: 1px solid rgb(236, 233, 233); */
+                       background-color: rgba(255, 255, 255);
+                       box-shadow: 0px 8px 16px 0px rgba(7, 7, 7, 0.384);
+                       z-index: 3;
+                       transition: all 0.5s;
+                   }
+                   
+                   .dropcontainer:hover .dropdown_content {
+                       display: block;
+                       opacity: 1;
+                   }
+                   
+                   .dropdown_content a {
+                       display: block;
+                       text-decoration: none;
+                       padding: 10px;
+                       color: black;
+                       transition: all 0.5s;
+                   }
+                   
+                   .dropdown_content a:hover {
+                       color: red;
+                       letter-spacing: 1px;
+                   }
+                   /* banner  */
+                   
+                   #banner {
+                       background: url('../img/main-banner.jpg');
+                       background-repeat: no-repeat;
+                       background-position: center;
+                       background-attachment: fixed;
+                       background-size: cover;
+                       background-color: rgba(0, 0, 0, 0.247);
+                       position: relative;
+                       z-index: 1;
+                   }
+                   
+                   #banner::before {
+                       content: '';
+                       position: absolute;
+                       left: 0;
+                       top: 0;
+                       z-index: -1;
+                       width: 100%;
+                       height: 100%;
+                       background: #000;
+                       opacity: 0.5;
+                   }
+                   
+                   #banner .content {
+                       color: white;
+                       font-size: 15px;
+                       padding: 200px 0px;
+                       max-width: 800px;
+                   }
+                   
+                   #main_heading {
+                       font-size: 6vw;
+                   }
+                   
+                   .followlinks {
+                       position: absolute;
+                       right: -100px;
+                       top: 50%;
+                       transform: rotate(-90deg);
+                       color: white;
+                       font-size: 20px;
+                   }
+                   
+                   .followlinks a {
+                       text-decoration: none;
+                       color: white;
+                       cursor: pointer !important;
+                       transition: all 0.5s;
+                   }
+                   
+                   .followlinks a:hover {
+                       color: red;
+                   }
+                   
+                   .followlinks a span {
+                       padding-left: 20px;
+                   }
+                   
+                   #banner .row {
+                       border-top: 1px white solid;
+                       color: white;
+                       font-size: 20px;
+                       padding: 20px 0px;
+                   }
+                   
+                   #banner .col-sm-4 {
+                       border-right: 1px white solid;
+                   }
+                   /*////////////////////////// about company /////////////////////////// */
+                   
+                   .aboutCompContainer {
+                       margin: 50px 0px 100px 0px;
+                   }
+                   
+                   #overlapping {
+                       position: relative;
+                       /* height: 500px; */
+                   }
+                   
+                   #overlapping .image {
+                       position: absolute;
+                       max-width: 100%;
+                       display: block;
+                   }
+                   
+                   #overlapping #img1 {
+                       top: 0px;
+                       z-index: 1;
+                   }
+                   
+                   #overlapping #img2 {
+                       top: 150px;
+                       z-index: 2;
+                       right: 20px;
+                   }
+                   
+                   #overlapping .content {
+                       display: flex;
+                       border-left: 4px red solid;
+                       position: absolute;
+                       z-index: 3;
+                       background-color: white;
+                       top: 400px;
+                       left: 20%;
+                       box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.363);
+                       ;
+                   }
+                   
+                   #overlapping .content span {
+                       padding: 30px 40px;
+                       font-size: 2.5vw;
+                   }
+                   
+                   #overlapping .content #number {
+                       font-size: 84px;
+                       padding: 11px 0px 11px 40px;
+                   }
+                   
+                   #about_list {
+                       list-style: none;
+                       padding: 0px;
+                   }
+                   
+                   #about_list li::before {
+                       content: "\2713";
+                       color: red;
+                       font-size: 20px;
+                       padding-right: 10px;
+                       font-weight: bold;
+                   }
+                   /* transparent process  */
+                   
+                   .title {
+                       text-align: center;
+                       color: red;
+                   }
+                   
+                   .heading {
+                       font-weight: bold;
+                       font-size: 40px;
+                       text-align: center;
+                   }
+                   
+                   .heading_content {
+                       text-align: center;
+                   }
+                   
+                   .item_container {
+                       display: flex;
+                       justify-content: space-evenly;
+                       flex-wrap: wrap;
+                   }
+                   
+                   .item {
+                       text-align: center;
+                       overflow: hidden;
+                       box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.363);
+                       position: relative;
+                       width: 23%;
+                       padding: 0px 12px;
+                       transition: all 0.5s;
+                       border-radius: 10px;
+                       cursor: pointer;
+                   }
+                   
+                   .item .semiCircle {
+                       border-radius: 50%;
+                       background-color: rgba(255, 0, 0, 0.301);
+                       height: 65%;
+                       width: 112%;
+                       margin: auto;
+                       position: absolute;
+                       top: -50%;
+                       left: 50%;
+                       transform: translate(-50%);
+                   }
+                   
+                   .item .content {
+                       padding: 100px 0px 50px 0px;
+                   }
+                   
+                   .item .circle {
+                       border-radius: 50%;
+                       height: 50px;
+                       width: 50px;
+                       background-color: red;
+                       position: absolute;
+                       bottom: -20px;
+                       left: 50%;
+                       transform: translate(-50%);
+                       transition: all 0.5s;
+                       display: flex;
+                       justify-content: center;
+                       align-items: center;
+                       font-size: 25px;
+                   }
+                   
+                   .item:hover {
+                       transform: translateY(-15px);
+                   }
+                   
+                   .item:hover .circle {
+                       background-color: black;
+                       color: red;
+                   }
+                   
+                   .item:hover .semiCircle {
+                       background-color: rgba(255, 0, 0, 0.601);
+                   }
+                   /*////////////////// company values  ////////////////////////////////*/
+                   
+                   #compValues {
+                       margin: 50px 0px;
+                   }
+                   
+                   #compValues .row img {
+                       max-width: 100%;
+                   }
+                   
+                   .value {
+                       margin-top: 30px;
+                       position: relative;
+                       display: flex;
+                   }
+                   
+                   .value .icon {
+                       padding-right: 10px;
+                   }
+                   
+                   #compValues .value .icon i {
+                       font-size: 40px;
+                       color: red;
+                   }
+                   /*///////////////// funding circles////////////////  */
+                   
+                   .steps {
+                       margin-top: 40px;
+                       position: relative;
+                   }
+                   
+                   .steps .content {
+                       padding-left: 80px;
+                   }
+                   
+                   .steps .num {
+                       color: red;
+                       font-size: 30px;
+                       background-color: rgb(240, 238, 238);
+                       border-radius: 50%;
+                       height: 50px;
+                       width: 50px;
+                       text-align: center;
+                       border: 1px solid red;
+                       display: inline-block;
+                       position: absolute;
+                       left: 0;
+                   }
+                   
+                   .stick::before {
+                       content: "";
+                       position: absolute;
+                       z-index: -1;
+                       width: 1px;
+                       height: 170%;
+                       left: 25px;
+                       background-color: red;
+                   }
+                   
+                   .form_container {
+                       background-color: rgb(209, 12, 12);
+                       color: white;
+                       padding: 30px;
+                   }
+                   
+                   .form_container p,
+                   .form_container h1 {
+                       text-align: center;
+                   }
+                   /*//////////////////// footer  /////////////////////*/
+                   
+                   footer {
+                       background-color: black;
+                       padding-top: 50px;
+                       color: white;
+                       margin-top: 50px;
+                   }
+                   
+                   footer .socialIcons a {
+                       text-decoration: none;
+                       color: white;
+                       transition: all 0.5s;
+                       padding-right: 5px;
+                   }
+                   
+                   footer .socialIcons a:hover {
+                       text-decoration: none;
+                       color: red;
+                   }
+                   
+                   footer h4 {
+                       padding-bottom: 20px;
+                       border-bottom: 1px solid white;
+                   }
+                   
+                   footer .flist {
+                       padding: 0px;
+                       list-style: none;
+                   }
+                   
+                   .flist a {
+                       text-decoration: none;
+                       color: white;
+                       transition: all 0.5s;
+                   }
+                   
+                   .flist li a:hover {
+                       text-decoration: none;
+                       color: red;
+                       letter-spacing: 1px;
+                   }
+                   
+                   .contact_us {
+                       position: relative;
+                   }
+                   
+                   .contact_us i {
+                       position: absolute;
+                       left: 0;
+                       font-size: 25px;
+                   }
+                   
+                   .contact_us .content {
+                       padding-left: 30px;
+                   }
+                   
+                   .contact_us li {
+                       margin-bottom: 10px !important;
+                       position: relative;
+                   }
+                   
+                   .up {
+                       display: none;
+                       width: 50px;
+                       border-radius: 50%;
+                       height: 50px;
+                       font-size: 25px;
+                       justify-content: center;
+                       align-items: center;
+                       color: white;
+                       background-color: black;
+                       position: fixed;
+                       right: 25px;
+                       bottom: 30px;
+                       border: 1px solid white;
+                       z-index: 10;
+                       cursor: pointer;
+                       transition: all 0.5s;
+                       animation: show 1s;
+                   }
+                   
+                   @keyframes show {
+                       from {
+                           opacity: 0;
+                       }
+                       tp {
+                           opacity: 1;
+                       }
+                   }
+                   
+                   .up:hover {
+                       background-color: red;
+                   }
+                   /*///////////////////////// media queries  /////////////////////*/
+                   
+                   @media (max-width:900px) {
+                       .item {
+                           width: 45%;
+                           margin-top: 20px;
+                       }
+                       #overlapping .image,
+                       #overlapping .content {
+                           position: static;
+                           margin-top: 10px;
+                       }
+                   }
+                   
+                   @media (max-width:450px) {
+                       .item {
+                           width: 95%;
+                           margin-top: 20px;
+                       }
+                       .followlinks {
+                           position: static;
+                           /* right: -100px; */
+                           /* top: 50%; */
+                           transform: rotate(0deg);
+                           color: white;
+                           font-size: 20px;
+                       }
+                   }
+                   
+                   @media (min-width:900px) {
+                       .aboutCompContainer {
+                           margin-bottom: 200px;
+                       }
+                   }
