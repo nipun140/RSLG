@@ -1,7 +1,17 @@
 let id = document.getElementById("responsivetoggle")
+let btnid = document.getElementById('btn');
+btnid.innerHTML = '<div class="bar"></div><div class="bar"></div><div class="bar"></div>';
 
 function toggleDisplay() { //as we press the button the class is applied and if press it again that class is not applied
     id.classList.toggle("active");
+    if (btnid.innerHTML === '<div class="bar"></div><div class="bar"></div><div class="bar"></div>') {
+        btnid.innerHTML = '<i id="closebtn" class="fa fa-close"></i>';
+        console.log('1')
+    } else {
+        btnid.innerHTML = '<div class="bar"></div><div class="bar"></div><div class="bar"></div>';
+        console.log('2')
+    }
+
 }
 
 window.addEventListener('scroll', function() {

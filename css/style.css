@@ -38,7 +38,10 @@
                        width: 95%;
                        height: 6px;
                        background-color: black;
-                       /* border-radius: 20%; */
+                   }
+                   
+                   #closebtn {
+                       font-size: 35px;
                    }
                    
                    .navbar ul {
